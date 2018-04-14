@@ -16,17 +16,20 @@ var images = {
 	}
 };
 
+// Looping through the images object
 for (var key in images) {
-    var obj = images[key];
-    for (var prop in obj) {
-        // skip loop if the property is from prototype
-        if(!obj.hasOwnProperty(prop)) continue;
+		// Getting the html div id
+		var div = document.getElementById( 'picture-container' );
 
-        // your code
-				var div = document.getElementById( 'picture-container' )
-        var image = '<img src="' + obj[prop] + '">';
+		// Assigning the different value for each images
+    var path = images[key].path;
+		var heading = images[key].heading;
+		var description = images[key].description;
 
-				div.innerHTML += image;
+		// Creating the HTML tags to insert
+    var image = '<div class="container"><img src="' + path + '" alt="' + description + '" >' +
+								'<div class="overlay"><div class="title"> ' + heading + '</div><div class="description">' + description + '</div></div></div>';
 
-    }
+		// Appending the HTML tags to the div with the id picture-container
+		div.innerHTML += image;
 }
