@@ -28,7 +28,7 @@ for (var key in images) {
 
 		// Creating the HTML tags to insert
 			var image = '<div class="container">' +
-										'<div class="img" style="background-image:url(\'' + path + '\');"></div>' +
+										'<img src="' + path + '" class="img crop" alt="' + description + '" />' +
 										'<div class="overlay">' +
 											'<div class="title"> ' + heading + '</div>' +
 											'<div class="description">' + description + '</div>' +

@@ -1,6 +1,8 @@
 /****** Header *******/
 a {
   text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
 }
 
 ul#header-links li{
@@ -23,18 +25,23 @@ ul#header-links li{
   display: flex;
   align-items: flex-start;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 /****** SideBar *******/
 #side-links {
-  width: 30%;
+  width: 25%;
 }
 
 #main-content {
-  width: 70%;
-  margin-left: 7%;
+  width: 75%;
+  margin: 0% 2.5%;
+  padding: 2.5% 2.5%;
+  border: 1px solid #e4e2e2;
+  border-top: hidden;
+  box-shadow: inset 0px -15px 0px -10px #f4f4f4;
 }
+
 
 .sideLinks-title {
   text-transform: uppercase;
@@ -81,15 +88,17 @@ h1 {
 }
 
 #picture-container {
+  margin-top: 5%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 
 #picture-container img {
   display: block;
+
 }
 
 .picture {
@@ -98,10 +107,12 @@ h1 {
 .img {
   position: relative;
    width:  350px;
-   height: 250px;
-   background-position: 50% 50%;
-   background-repeat:   no-repeat;
-   background-size:     cover;
+   height: 225px;
+   background-position: 70% 40%;
+   background-repeat: no-repeat;
+   background-size: 110%;
+   border: 2px solid #00a7e0;
+   object-fit: cover;
 }
 
 .container {
@@ -118,7 +129,7 @@ h1 {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: #00a7e0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,8 +137,11 @@ h1 {
 }
 
 .container:hover .overlay {
-  opacity: .7;
+  opacity: 0.7;
+}
 
+.container:hover .overlay-txt {
+  opacity: 1;
 }
 
 .title {
