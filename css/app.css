@@ -84,20 +84,29 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 
-img {
+#picture-container img {
   display: block;
-  width: 40%;
-  height: auto;
+}
+
+.picture {
+  text-align: center;
+}
+.img {
+  position: relative;
+   width:  350px;
+   height: 250px;
+   background-position: 50% 50%;
+   background-repeat:   no-repeat;
+   background-size:     cover;
 }
 
 .container {
   position: relative;
-  width: 50%;
 }
-
 
 .overlay {
   position: absolute;
@@ -110,19 +119,28 @@ img {
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container:hover .overlay {
-  opacity: 0.5;
+  opacity: .7;
+
 }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+.title {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+
+
+.description {
+  font-size: 1em;
+  color: #fff;
+  opacity: 1;
 }

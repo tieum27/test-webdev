@@ -27,9 +27,12 @@ for (var key in images) {
 		var description = images[key].description;
 
 		// Creating the HTML tags to insert
-    var image = '<div class="container"><img src="' + path + '" alt="' + description + '" >' +
-								'<div class="overlay"><div class="title"> ' + heading + '</div><div class="description">' + description + '</div></div></div>';
-
-		// Appending the HTML tags to the div with the id picture-container
+			var image = '<div class="container">' +
+										'<div class="img" style="background-image:url(\'' + path + '\');"></div>' +
+										'<div class="overlay">' +
+											'<div class="title"> ' + heading + '</div>' +
+											'<div class="description">' + description + '</div>' +
+										'</div>' +
+									'</div>';
 		div.innerHTML += image;
 }
