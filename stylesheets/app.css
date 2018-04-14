@@ -5,19 +5,31 @@ a {
   color: #000;
 }
 
-ul#header-links li{
+#specials a:last-child {
+  color: #fff;
+}
+
+a:hover {
+  color: #00a7e0
+}
+
+#header-links li{
 	display: inline;
   padding: 20px;
   text-transform: uppercase;
-
+}
+#specials {
+  background-color: #00a7e0;
 }
 
 #headerLinks-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-between;
   padding-bottom: 20px;
   border-bottom: 2px solid #e4e2e2;
+  margin: 0% 2.5%;
 }
 
 /****** Main *******/
@@ -31,19 +43,29 @@ ul#header-links li{
 /****** SideBar *******/
 #side-links {
   width: 25%;
+  margin-left: 2.5%;
+}
+
+#sideLinks-title {
+  font-family: font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
 }
 
 #main-content {
+
   width: 75%;
   margin: 0% 2.5%;
-  padding: 2.5% 2.5%;
+  padding: 0em 2.5em 2.5em 2.5em;
   border: 1px solid #e4e2e2;
   border-top: hidden;
   box-shadow: inset 0px -15px 0px -10px #f4f4f4;
+  overflow-y: auto;
 }
 
 
 .sideLinks-title {
+  font-family: font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   text-transform: uppercase;
   position: relative;
   background: #e4e2e2;
@@ -66,7 +88,18 @@ ul#header-links li{
 }
 
 
+#side-links li {
+  font-family: font-family: 'Open Sans', sans-serif;
+  list-style: none;
+  padding-left: 0.15em;
+  text-indent: -0.4em
+}
 
+.links li::before{
+  content: "• ";
+  color: #00a7e0;
+
+}
 
 h1 {
   text-transform: uppercase;
@@ -75,6 +108,8 @@ h1 {
 }
 
 #heading1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   font-size: 2em;
   color: #00a7e0;
   text-transform: uppercase;
@@ -82,9 +117,16 @@ h1 {
 }
 
 #heading2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   text-indent: 1em;
   font-style: italic;
   font-weight: bold;
+}
+
+#main-content p {
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 #picture-container {
@@ -140,11 +182,9 @@ h1 {
   opacity: 0.7;
 }
 
-.container:hover .overlay-txt {
-  opacity: 1;
-}
-
 .title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   position: relative;
   text-transform: uppercase;
   font-size: 1.5em;
