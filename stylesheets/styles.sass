@@ -40,19 +40,31 @@ body
   min-width: 300px
 
 ////////// Header ////////////
+
+header
+  z-index: 100
+
 a
   text-decoration: none
   color: $links
   &:hover
     color: $main-color
+    #menu-icon
+      background-color: #444
+      border-radius: 4px 4px 0 0
 
-#specials
+#specials li
   background-color: $main-color
   color: $description
 
 #header-links
-  a
+  li
     padding: 20px
+    padding: 20px
+    display: inline-block
+    float: left
+    padding: 10px
+
 
 #headerLinks-container
   flex-wrap: wrap
@@ -63,6 +75,13 @@ a
   border-bottom: 2px solid $borders
   margin: 0% 2.5%
 
+#menu-icon
+  display: hidden
+  width: 40px
+  height: 40px
+  background: $main-color url(../images/menu-icon.png) center
+
+
 
 ////////// Sidebar ////////////
 #side-links
@@ -71,7 +90,10 @@ a
   li
     list-style: none
     padding-left: 0.15em
-    text-indent: -0.4em
+    text-indent: 0.4em
+
+#side-links-space
+  margin-bottom: 1.5em
 
 .sideLinks-title
   font-weight: 600
@@ -187,6 +209,8 @@ a
     flex-wrap: wrap-reverse
     justify-content: center
 
+  #side-links
+    margin-top: 3em
   #specials
     background-color: $description
     color: $links
@@ -194,8 +218,31 @@ a
       color: $main-color
 
 @media screen and (max-width: $break-small)
-  .navigation
-    a
-      display: inline-block
+  #menu-icon
+    display: inline-block
 
-@media screen and (max-width: $break-small)
+  nav
+    ul,
+    &:active
+      ul
+      display: none
+      position: absolute
+      padding: 20px
+      border: 2px solid $borders
+      background: $description
+      right: 20px
+      top: 60px
+      width: 50%
+      border-radius: 4px 0 4px 4px
+
+  nav
+    li
+    text-align: center
+    width: 100%
+    padding: 10px 0
+    margin: 0
+
+  nav
+    &:hover
+      ul
+        display: block
