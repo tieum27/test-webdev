@@ -1,2 +1,5 @@
 .DS_Store
 .idea/
+# Ignore docs files
+styles/.sass-cache
+styles/.sass-cache/*
