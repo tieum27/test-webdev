@@ -218,13 +218,12 @@ a
       color: $main-color
 
 @media screen and (max-width: $break-small)
+
   #menu-icon
     display: inline-block
 
-  nav
-    ul,
-    &:active
-      ul
+  nav ul,
+  nav:active ul
       display: none
       position: absolute
       padding: 20px
@@ -235,8 +234,7 @@ a
       width: 50%
       border-radius: 4px 0 4px 4px
 
-  nav
-    li
+  nav li
     text-align: center
     width: 100%
     padding: 10px 0
