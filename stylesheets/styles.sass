@@ -34,6 +34,11 @@ a,
 .overlay
   display: flex
 
+////////// Body ////////////
+
+body
+  min-width: 300px
+
 ////////// Header ////////////
 a
   text-decoration: none
@@ -58,9 +63,6 @@ a
   border-bottom: 2px solid $borders
   margin: 0% 2.5%
 
-.navigation
-  .icon
-    display: none
 
 ////////// Sidebar ////////////
 #side-links
@@ -176,30 +178,24 @@ a
 @media screen and (max-width: $break-large)
   #picture-container
     justify-content: center
+
   .container
     margin-bottom: 2%
+
 @media screen and (max-width: $break-mid)
   #main
     flex-wrap: wrap-reverse
+    justify-content: center
+
+  #specials
+    background-color: $description
+    color: $links
+    &:hover
+      color: $main-color
 
 @media screen and (max-width: $break-small)
   .navigation
     a
-      &:not(:first-child)
-        display: none
-      .icon
-        float: right
-        display: block
+      display: inline-block
 
 @media screen and (max-width: $break-small)
-  .navigation
-    .responsive
-      position: relative
-      a
-        .icon
-          position: absolute
-          right: 0
-          top: 0
-        float: none
-        display: block
-        text-align: left
